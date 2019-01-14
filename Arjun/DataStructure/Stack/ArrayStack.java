@@ -17,7 +17,7 @@ public class ArrayStack<E> {
 
     //Operations : 1.Push 2.Pop 3.Peek 4.Print 5.isEmpty()
     public boolean isEmpty(){
-       return top == -1 ? true : false;
+       return top == -1;
     }
 
     public boolean isFull(){
