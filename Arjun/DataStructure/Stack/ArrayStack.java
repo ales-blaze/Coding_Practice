@@ -26,9 +26,8 @@ public class ArrayStack<E> {
 
     public void Push(E data){
         if(this.isFull()){
-            E newStackArray[] =(E[]) new Object[stack.length * 2];
-            int iterator = 0;
-            for(/*int iterator = 0 */; iterator <= top ; iterator++){
+            E newStackArray[] =(E[]) new Object[stack.length * 2];            
+            for(int iterator = 0; iterator <= top ; iterator++){
                 newStackArray[iterator] = stack[iterator];
             }
             newStackArray[++top] = data;
@@ -36,15 +35,13 @@ public class ArrayStack<E> {
             newStackArray = null;
         }
         else{
-            //top++;
             stack[++top] = data;
         }
     }
     public E Pop(){
         if(this.isEmpty()) return null;
         else{
-            E tempoStorage = stack[top];
-            top--;
+            E tempoStorage = stack[top--];
             return tempoStorage;
         }
     }
